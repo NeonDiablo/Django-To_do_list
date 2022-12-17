@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block content %}
+
+<div class="all_page">
+    <div class="container">
+        <h1 class="text-center mt-3">
+            Sometimes you need to write a plan <br>
+            or a list of products,<br>
+            remind of microwave pizza<br>
+            or just don't forget about grandfather's birthday,<br>
+            and here our site will come in handy,<br>
+            if suddenly there is no notebook and pen.
+        </h1>
+    </div>
+    <hr>
+
+    <div class="container cards d-flex justify-content-center flex-wrap ">
+        <div class="card-deck justify-content-between  m-2 ">
+                <div class="card mb-3 align-self-start border-danger"  style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-danger pt-1 m-auto"> 
+                        <a href="#" style="text-decoration: none; color: black"> update </a> | 
+                        <a href="#" style="text-decoration: none; color: black"> delete </a> 
+                    </div>
+                    
+                    <div class="card-body ">
+
+                        <a href="#" style="text-decoration: none; color: black;" >
+                            <h5 class="card-title ">Buy milk </h5>
+                            <p class="card-text border-danger">{{ 'I need to go to the store and buy some milk to bake a cake' | truncatewords:12 }}                        </p>
+                        </a>
+                    
+                    </div>
+                    <div class="card-footer bg-transparent border-danger d-flex justify-content-center ">
+                            26.08.2022 --- 26.08.2022
+                    </div>
+                </div>
+            </div>
+            
+            <!---second card -->
+
+            <div class="card-deck d-flex justify-content-between m-2 ">
+                <div class="card mb-3 align-self-start border-info"  style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-info pt-1 m-auto"> 
+                        <a href="#" style="text-decoration: none; color: black"> update </a> | 
+                        <a href="#" style="text-decoration: none; color: black"> delete </a> 
+                    </div>
+                    
+                    <div class="card-body ">
+
+                        <a href="#" style="text-decoration: none; color: black;" >
+                            <h5 class="card-title ">Watch serial </h5>
+                            <p class="card-text border-info">{{ "Watch season 4 breaking bad because this series is taking too long" | truncatewords:10 }}</p>
+                        </a>
+                    
+                    </div>
+                    <div class="card-footer bg-transparent border-info d-flex justify-content-center ">
+                            26.08.2022 --- 26.08.2022
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <hr>
+
+    <div class="cards">
+        <div class="d-flex flex-wrap flex-row justify-content-center">
+            <div class="card mb-3 border-primary "  style="max-width: 18rem; padding:50px; padding-top:50px">
+                <div class="card-header bg-transparent  pt-1 m-auto">
+                    Blue
+                </div>
+            </div>
+            <div class="mb-3 " style="max-width: 18rem; padding:50px; padding-top:50px">
+                <h1>TO</h1>
+            </div>
+            <div class="card mb-3  border-secondary"  style="max-width: 18rem; padding:50px; padding-top:50px">
+                <div class="card-header bg-transparent  pt-1 m-auto">
+                    Gray
+                </div>
+            </div>
+        </div>
+
+        <div class="DO d-flex flex-wrap flex-row justify-content-center">
+            <div class="card mb-3 border-success "  style="max-width: 18rem; padding:50px; padding-top:50px">
+                <div class="card-header bg-transparent  pt-1 m-auto">
+                    Green
+                </div>
+            </div>
+            <div class="mb-3 " style="max-width: 18rem; padding:50px; padding-top:50px">
+                <h1>DO</h1>
+            </div>
+            <div class="card mb-3  border-danger"  style="max-width: 18rem; padding:50px; padding-top:50px">
+                <div class="card-header bg-transparent  pt-1 m-auto">
+                    Red
+                </div>
+            </div>
+        </div>
+
+
+        <div class="LIST d-flex flex-wrap flex-row justify-content-center">
+            <div class="card mb-3 border-warning"  style="max-width: 18rem; padding:50px; padding-top:50px">
+                <div class="card-header bg-transparent  pt-1 m-auto">
+                    Yellow
+                </div>
+            </div>
+            <div class="mb-3 " style="max-width: 18rem; padding:50px; padding-top:50px">
+                <h1>LIST</h1>
+            </div>
+            <div class="card mb-3  border-info"  style="max-width: 18rem; padding:50px; padding-top:50px">
+                <div class="card-header bg-transparent  pt-1 ">
+                    light-blue
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="block_end">
+        <h2 class="text-center">There will be many more updates in the future </h2>
+        <h1 class="text-center color-red">Sign to the club for <a href="{% url 'user_registration' %}"> free </a></h1>
+
+    </div>
+</div>
+{% endblock content %}
